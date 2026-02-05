@@ -3,172 +3,179 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sleepy Jazz — A Calm Nighttime Soundscape for Insomnia Relief</title>
     <meta
       name="description"
-      content="Sleepy Jazz is a minimalist, insomnia-focused soundscape that blends gentle jazz with calming ambience for better sleep."
+      content="Sleepy Jazz is a minimalist insomnia-friendly landing page with calming jazz soundscapes, sleep tools, and a gentle night routine."
     />
-    <meta name="keywords" content="sleep, insomnia, jazz, calm, relaxation, soundscape" />
+    <meta
+      name="keywords"
+      content="Sleepy Jazz, insomnia relief, calming jazz, sleep routine, night playlist"
+    />
     <meta name="author" content="Sleepy Jazz" />
-    <meta property="og:title" content="Sleepy Jazz — A Calm Nighttime Soundscape" />
+    <meta property="og:title" content="Sleepy Jazz — Calm Nights, Soft Jazz" />
     <meta
       property="og:description"
-      content="Ease insomnia with gentle jazz, breathing guides, and a minimalist nighttime experience."
+      content="A minimalist insomnia-based landing page with calm jazz, guided wind-down, and a gentle night routine."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sleepyjazz.example" />
     <meta property="og:image" content="https://sleepyjazz.example/og-image.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sleepy Jazz — Calm Nights, Soft Jazz" />
+    <meta
+      name="twitter:description"
+      content="Minimalist insomnia-based design focused on calm jazz and gentle sleep routines."
+    />
+    <title>Sleepy Jazz — Calm Nights, Soft Jazz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header" id="home">
-      <div class="container nav">
-        <a class="logo" href="#home" aria-label="Sleepy Jazz home">
-          <span>Sleepy</span> Jazz
-        </a>
-        <nav class="nav-links" aria-label="Primary">
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="logo" href="#home">Sleepy Jazz</a>
+        <div class="nav-links">
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
-        </nav>
-        <a class="cta" href="#contact">Start winding down</a>
-      </div>
-      <div class="container hero">
-        <div class="hero-content">
-          <p class="eyebrow">Insomnia-friendly soundscape</p>
-          <h1>Fall asleep to the softest jazz, designed for restless nights.</h1>
-          <p class="lead">
-            Sleepy Jazz blends slow piano, warm brass, and gentle ambience into a minimal
-            listening ritual that quiets the mind and supports a deeper sleep.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#contact">Join the early list</a>
-            <a class="button ghost" href="#about">Explore the experience</a>
-          </div>
-          <div class="hero-stats" aria-label="Sleepy Jazz highlights">
-            <div>
-              <h3>20 min</h3>
-              <p>Guided wind-down session</p>
-            </div>
-            <div>
-              <h3>3 modes</h3>
-              <p>Drift, Deep, and Dream loops</p>
-            </div>
-            <div>
-              <h3>100%</h3>
-              <p>Screen-dim, low stimulation UI</p>
-            </div>
-          </div>
         </div>
-        <div class="hero-card" role="presentation">
-          <div class="card">
-            <p class="card-title">Tonight's flow</p>
-            <ol>
-              <li>Slow jazz intro · 4 min</li>
-              <li>Breath pacing · 6 min</li>
-              <li>Deep sleep loop · 30+ min</li>
-            </ol>
-            <p class="card-footer">Auto-dim + tap-free controls</p>
-          </div>
-        </div>
-      </div>
+        <button class="nav-cta" type="button">Start winding down</button>
+      </nav>
     </header>
 
-    <main>
-      <section class="section" id="about">
-        <div class="container two-column">
-          <div>
-            <h2>Minimalist by design. Sleep first, always.</h2>
-            <p>
-              Sleepy Jazz is built for people who are sensitive to bright screens and noisy
-              interfaces at night. Every element is intentionally restrained—soft contrast,
-              calm typography, and a flow that never asks you to think.
-            </p>
-            <p>
-              The experience adapts to your evening routine with ambient jazz, gentle
-              breathing cues, and a one-tap timer that respects your sleep cycle.
-            </p>
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-text">
+          <p class="eyebrow">Insomnia-friendly soundscapes</p>
+          <h1 id="hero-title">Calm nights, soft jazz, and a gentler way to sleep.</h1>
+          <p class="lead">
+            Sleepy Jazz blends minimalist design with soothing jazz loops, breathing
+            prompts, and sleep rituals—everything you need to slow down and drift off.
+          </p>
+          <div class="hero-actions">
+            <button class="primary" type="button">Listen to the night set</button>
+            <button class="ghost" type="button">Build your routine</button>
           </div>
-          <div class="feature-grid">
-            <div class="feature">
-              <h3>Sleep-safe palette</h3>
-              <p>Warm neutrals and low-contrast tones reduce stimulation.</p>
+          <div class="hero-stats" role="list">
+            <div role="listitem">
+              <span class="stat">120+</span>
+              <span class="stat-label">curated late-night tracks</span>
             </div>
-            <div class="feature">
-              <h3>Zero clutter</h3>
-              <p>No pop-ups, no noise, and no notifications after dark.</p>
+            <div role="listitem">
+              <span class="stat">4</span>
+              <span class="stat-label">gentle sleep stages</span>
             </div>
-            <div class="feature">
-              <h3>Smart timers</h3>
-              <p>Automated fade-outs align with your natural sleep drift.</p>
+            <div role="listitem">
+              <span class="stat">15 min</span>
+              <span class="stat-label">average wind-down time</span>
             </div>
-            <div class="feature">
-              <h3>Designed for mobile</h3>
-              <p>Optimized for one-hand use with large, calm touch targets.</p>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <p class="card-label">Tonight's mood</p>
+            <h2>Midnight Blue Session</h2>
+            <p>Low brass, brushed drums, slow tempo.</p>
+            <div class="card-progress">
+              <span>01</span>
+              <div class="progress-bar" aria-hidden="true">
+                <span></span>
+              </div>
+              <span>04</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section alt" aria-labelledby="contact" id="contact">
-        <div class="container contact">
-          <div>
-            <h2 id="contact">Stay close to the calm.</h2>
-            <p>
-              We are building the gentlest sleep experience for people with insomnia. Join
-              our early access list and help shape the nightly ritual.
-            </p>
-            <ul class="contact-details">
-              <li>Weekly quiet-night tips</li>
-              <li>Early access to new soundscapes</li>
-              <li>Priority support for sleep questions</li>
-            </ul>
+      <section id="about" class="about" aria-labelledby="about-title">
+        <div>
+          <h2 id="about-title">A landing page built for night owls.</h2>
+          <p>
+            Sleepy Jazz is a calm-first experience for people with insomnia. Every
+            element is intentional: soft contrast, generous spacing, and precise copy
+            that encourages slower breathing. The UX prioritizes focus, warmth, and
+            clarity so your mind can settle.
+          </p>
+        </div>
+        <div class="about-grid">
+          <article>
+            <h3>Minimalist UI</h3>
+            <p>Clean typography and muted tones reduce overstimulation.</p>
+          </article>
+          <article>
+            <h3>Guided Routine</h3>
+            <p>Short rituals turn rest into a gentle habit, night after night.</p>
+          </article>
+          <article>
+            <h3>Mobile-first</h3>
+            <p>Thumb-friendly controls and flexible layouts for late-night browsing.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="features" aria-labelledby="features-title">
+        <div class="features-header">
+          <h2 id="features-title">Designed to feel like a deep breath.</h2>
+          <p>
+            The Sleepy Jazz experience is built around the three phases of a wind-down
+            routine: slowing the body, quieting the mind, and easing into sleep.
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>Slow Tempo Library</h3>
+            <p>Handpicked tracks under 75 BPM keep your heart rate steady.</p>
           </div>
-          <form class="form" aria-label="Sleepy Jazz early access">
-            <label>
-              Full name
-              <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
-            </label>
-            <label>
-              Email address
+          <div class="feature-card">
+            <h3>Breath Cues</h3>
+            <p>Subtle pulses guide inhaling and exhaling without distraction.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Night Notes</h3>
+            <p>Capture worries and release them before you close your eyes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <div class="contact-card">
+          <div>
+            <h2 id="contact-title">Stay close to the night.</h2>
+            <p>
+              Join the Sleepy Jazz list for new sets, insomnia research, and gentle
+              reminders to breathe.
+            </p>
+          </div>
+          <form class="contact-form">
+            <label for="email">Email address</label>
+            <div class="input-row">
               <input
                 type="email"
+                id="email"
                 name="email"
                 placeholder="you@example.com"
-                autocomplete="email"
                 required
               />
-            </label>
-            <label>
-              Night routine focus
-              <select name="focus" aria-label="Night routine focus">
-                <option>Falling asleep faster</option>
-                <option>Staying asleep longer</option>
-                <option>Reducing night anxiety</option>
-              </select>
-            </label>
-            <button type="submit">Request early access</button>
-            <p class="form-note">No spam. Only soft updates when the night is quiet.</p>
+              <button type="submit">Get the playlist</button>
+            </div>
+            <p class="form-note">No noise. Just one calm email each week.</p>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-content">
-        <p>© 2024 Sleepy Jazz. Crafted for calmer nights.</p>
-        <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
+    <footer class="footer">
+      <p>© 2024 Sleepy Jazz. Designed for calm, crafted for sleepless nights.</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
       </div>
     </footer>
   </body>
