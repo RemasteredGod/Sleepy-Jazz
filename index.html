@@ -3,742 +3,180 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sleepy Jazz — AI-Powered Sleep Recovery</title>
     <meta
       name="description"
-      content="Sleepy Jazz helps you fix your sleep naturally in 90 days with AI-guided routines, expert support, and optional smartwatch insights."
+      content="Sleepy Jazz is a minimalist insomnia-friendly landing page with calming jazz soundscapes, sleep tools, and a gentle night routine."
     />
-    <meta name="theme-color" content="#101225" />
-    <style>
-      :root {
-        color-scheme: light;
-        --bg: #f7f6fb;
-        --ink: #101225;
-        --muted: #5c5f78;
-        --primary: #1f2a7a;
-        --primary-soft: #6e6ad5;
-        --card: #ffffff;
-        --shadow: 0 24px 60px rgba(15, 18, 37, 0.12);
-        --radius: 22px;
-        font-family: "Inter", "SF Pro Display", "Segoe UI", system-ui, sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        background: var(--bg);
-        color: var(--ink);
-        line-height: 1.6;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      img {
-        max-width: 100%;
-        display: block;
-      }
-
-      .container {
-        width: min(1140px, 92%);
-        margin: 0 auto;
-      }
-
-      .section {
-        padding: 88px 0;
-      }
-
-      .section-title {
-        font-size: clamp(2rem, 3.4vw, 2.8rem);
-        margin-bottom: 16px;
-      }
-
-      .section-lead {
-        color: var(--muted);
-        max-width: 640px;
-      }
-
-      .pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 6px 14px;
-        border-radius: 999px;
-        background: rgba(31, 42, 122, 0.08);
-        color: var(--primary);
-        font-size: 0.85rem;
-        font-weight: 600;
-        letter-spacing: 0.3px;
-      }
-
-      header {
-        padding: 32px 0 96px;
-        background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 52%);
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 24px;
-      }
-
-      .logo {
-        font-size: 1.3rem;
-        font-weight: 700;
-      }
-
-      .logo span {
-        color: var(--primary);
-      }
-
-      .nav-links {
-        display: flex;
-        gap: 20px;
-        font-size: 0.95rem;
-        color: var(--muted);
-      }
-
-      .nav-links a {
-        position: relative;
-        padding-bottom: 4px;
-      }
-
-      .nav-links a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 2px;
-        background: var(--primary);
-        transition: width 0.2s ease;
-      }
-
-      .nav-links a:hover::after,
-      .nav-links a:focus-visible::after {
-        width: 100%;
-      }
-
-      .nav-cta {
-        padding: 10px 18px;
-        border-radius: 999px;
-        background: var(--primary);
-        color: #fff;
-        font-weight: 600;
-        font-size: 0.9rem;
-      }
-
-      .hero {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 48px;
-        align-items: center;
-        margin-top: 80px;
-      }
-
-      .hero h1 {
-        font-size: clamp(2.5rem, 4vw, 3.5rem);
-        line-height: 1.1;
-        margin: 18px 0 20px;
-      }
-
-      .hero p {
-        color: var(--muted);
-        font-size: 1.05rem;
-        max-width: 520px;
-      }
-
-      .hero-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        margin-top: 28px;
-      }
-
-      .button {
-        padding: 12px 22px;
-        border-radius: 999px;
-        font-weight: 600;
-        border: 1px solid transparent;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .button.primary {
-        background: var(--primary);
-        color: #fff;
-        box-shadow: 0 18px 40px rgba(31, 42, 122, 0.25);
-      }
-
-      .button.ghost {
-        border-color: rgba(31, 42, 122, 0.2);
-        color: var(--primary);
-        background: transparent;
-      }
-
-      .button:hover,
-      .button:focus-visible {
-        transform: translateY(-2px);
-      }
-
-      .hero-card {
-        background: var(--card);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
-        padding: 28px;
-      }
-
-      .hero-card h3 {
-        font-size: 1.1rem;
-        margin-bottom: 12px;
-      }
-
-      .hero-card ul {
-        list-style: none;
-        display: grid;
-        gap: 12px;
-        color: var(--muted);
-      }
-
-      .stats {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 20px;
-        margin-top: 48px;
-      }
-
-      .stat-card {
-        background: var(--card);
-        padding: 20px;
-        border-radius: 18px;
-        box-shadow: 0 12px 24px rgba(15, 18, 37, 0.08);
-      }
-
-      .stat-card h3 {
-        font-size: 1.6rem;
-        margin-bottom: 6px;
-      }
-
-      .stat-card span {
-        color: var(--muted);
-        font-size: 0.9rem;
-      }
-
-      .timeline {
-        display: grid;
-        gap: 18px;
-        margin-top: 40px;
-      }
-
-      .timeline-item {
-        display: grid;
-        grid-template-columns: 40px 1fr;
-        gap: 16px;
-        align-items: start;
-        padding: 20px;
-        border-radius: 18px;
-        background: var(--card);
-        box-shadow: 0 12px 26px rgba(15, 18, 37, 0.08);
-      }
-
-      .timeline-icon {
-        width: 40px;
-        height: 40px;
-        border-radius: 14px;
-        background: rgba(31, 42, 122, 0.12);
-        display: grid;
-        place-items: center;
-        color: var(--primary);
-        font-weight: 700;
-      }
-
-      .preview {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 20px;
-        margin-top: 40px;
-      }
-
-      .preview-card {
-        background: var(--card);
-        border-radius: 20px;
-        padding: 20px;
-        box-shadow: var(--shadow);
-      }
-
-      .preview-card h4 {
-        margin-bottom: 14px;
-      }
-
-      .bar-chart {
-        display: grid;
-        gap: 10px;
-      }
-
-      .bar {
-        height: 10px;
-        border-radius: 999px;
-        background: rgba(31, 42, 122, 0.12);
-        overflow: hidden;
-      }
-
-      .bar span {
-        display: block;
-        height: 100%;
-        border-radius: inherit;
-        background: linear-gradient(90deg, var(--primary), var(--primary-soft));
-      }
-
-      .line {
-        height: 80px;
-        border-radius: 16px;
-        background: linear-gradient(135deg, rgba(31, 42, 122, 0.18), rgba(110, 106, 213, 0.3));
-        position: relative;
-        overflow: hidden;
-      }
-
-      .line::after {
-        content: "";
-        position: absolute;
-        inset: 12px;
-        border-radius: 12px;
-        border: 2px dashed rgba(255, 255, 255, 0.6);
-      }
-
-      .ring {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        background: conic-gradient(var(--primary) 0 72%, rgba(31, 42, 122, 0.1) 72%);
-        display: grid;
-        place-items: center;
-        margin: 0 auto;
-      }
-
-      .ring span {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background: var(--card);
-        display: grid;
-        place-items: center;
-        font-weight: 700;
-      }
-
-      .why-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 18px;
-        margin-top: 36px;
-      }
-
-      .why-card {
-        background: var(--card);
-        padding: 22px;
-        border-radius: 18px;
-        box-shadow: 0 12px 26px rgba(15, 18, 37, 0.08);
-      }
-
-      .pricing {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 20px;
-        margin-top: 40px;
-      }
-
-      .price-card {
-        background: var(--card);
-        padding: 24px;
-        border-radius: 20px;
-        box-shadow: var(--shadow);
-        display: grid;
-        gap: 12px;
-      }
-
-      .price-card .price {
-        font-size: 1.8rem;
-        font-weight: 700;
-      }
-
-      .price-card ul {
-        list-style: none;
-        display: grid;
-        gap: 10px;
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-
-      .testimonials {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 20px;
-        margin-top: 32px;
-      }
-
-      .testimonial {
-        background: var(--card);
-        padding: 22px;
-        border-radius: 18px;
-        box-shadow: 0 12px 26px rgba(15, 18, 37, 0.08);
-      }
-
-      .testimonial strong {
-        display: block;
-        margin-bottom: 8px;
-      }
-
-      .cta-panel {
-        background: linear-gradient(135deg, rgba(31, 42, 122, 0.92), rgba(110, 106, 213, 0.88));
-        color: #fff;
-        border-radius: 28px;
-        padding: 40px;
-        display: grid;
-        gap: 16px;
-        text-align: center;
-      }
-
-      .cta-panel .button {
-        background: #fff;
-        color: var(--primary);
-        display: inline-flex;
-        justify-content: center;
-      }
-
-      footer {
-        padding: 40px 0 60px;
-        text-align: center;
-        color: var(--muted);
-        font-size: 0.9rem;
-      }
-
-      .reveal {
-        opacity: 0;
-        transform: translateY(24px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-      }
-
-      .reveal.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      @media (max-width: 900px) {
-        .nav {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .nav-cta {
-          align-self: stretch;
-          text-align: center;
-        }
-      }
-
-      @media (max-width: 720px) {
-        .section {
-          padding: 68px 0;
-        }
-
-        .hero {
-          margin-top: 48px;
-        }
-
-        .hero-actions {
-          flex-direction: column;
-        }
-      }
-    </style>
+    <meta
+      name="keywords"
+      content="Sleepy Jazz, insomnia relief, calming jazz, sleep routine, night playlist"
+    />
+    <meta name="author" content="Sleepy Jazz" />
+    <meta property="og:title" content="Sleepy Jazz — Calm Nights, Soft Jazz" />
+    <meta
+      property="og:description"
+      content="A minimalist insomnia-based landing page with calm jazz, guided wind-down, and a gentle night routine."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sleepyjazz.example" />
+    <meta property="og:image" content="https://sleepyjazz.example/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sleepy Jazz — Calm Nights, Soft Jazz" />
+    <meta
+      name="twitter:description"
+      content="Minimalist insomnia-based design focused on calm jazz and gentle sleep routines."
+    />
+    <title>Sleepy Jazz — Calm Nights, Soft Jazz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header id="home">
-      <div class="container nav">
-        <a class="logo" href="#home"><span>Sleepy</span> Jazz</a>
-        <nav class="nav-links" aria-label="Primary">
-          <a href="#how">How it works</a>
-          <a href="#insights">Insights</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#stories">Stories</a>
-        </nav>
-        <a class="nav-cta" href="#cta">Start Sleep Assessment</a>
-      </div>
-      <div class="container hero">
-        <div class="reveal">
-          <span class="pill">AI + expert sleep recovery</span>
-          <h1>Fix Your Sleep Naturally in 90 Days</h1>
-          <p>
-            AI-powered sleep recovery with personalized routines, real experts, and optional
-            smartwatch insights.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#cta">Start Sleep Assessment</a>
-            <a class="button ghost" href="#how">How It Works</a>
-          </div>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="logo" href="#home">Sleepy Jazz</a>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </div>
-        <div class="hero-card reveal">
-          <h3>Tonight's focus</h3>
-          <ul>
-            <li>15-minute wind-down protocol</li>
-            <li>Adaptive breathing tempo</li>
-            <li>Sleep-ready environment checklist</li>
-          </ul>
-        </div>
-      </div>
-      <div class="container stats">
-        <div class="stat-card reveal">
-          <h3 data-target="42">0%</h3>
-          <span>better sleep quality</span>
-        </div>
-        <div class="stat-card reveal">
-          <h3 data-target="35">0%</h3>
-          <span>lower stress levels</span>
-        </div>
-        <div class="stat-card reveal">
-          <h3 data-target="50">0%</h3>
-          <span>faster time to fall asleep</span>
-        </div>
-        <div class="stat-card reveal">
-          <h3 data-target="60">0%</h3>
-          <span>sleep consistency</span>
-        </div>
-      </div>
+        <button class="nav-cta" type="button">Start winding down</button>
+      </nav>
     </header>
 
-    <main>
-      <section class="section" id="how">
-        <div class="container">
-          <p class="pill">How it works</p>
-          <h2 class="section-title">A gentle recovery path that keeps improving.</h2>
-          <p class="section-lead">
-            Sleepy Jazz combines clinical sleep science and AI to build a personalized, low-effort
-            plan that adapts to your nights.
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-text">
+          <p class="eyebrow">Insomnia-friendly soundscapes</p>
+          <h1 id="hero-title">Calm nights, soft jazz, and a gentler way to sleep.</h1>
+          <p class="lead">
+            Sleepy Jazz blends minimalist design with soothing jazz loops, breathing
+            prompts, and sleep rituals—everything you need to slow down and drift off.
           </p>
-          <div class="timeline">
-            <div class="timeline-item reveal">
-              <div class="timeline-icon">1</div>
-              <div>
-                <h3>Smart sleep assessment</h3>
-                <p>Capture your sleep patterns, energy, and stress signals in minutes.</p>
-              </div>
+          <div class="hero-actions">
+            <button class="primary" type="button">Listen to the night set</button>
+            <button class="ghost" type="button">Build your routine</button>
+          </div>
+          <div class="hero-stats" role="list">
+            <div role="listitem">
+              <span class="stat">120+</span>
+              <span class="stat-label">curated late-night tracks</span>
             </div>
-            <div class="timeline-item reveal">
-              <div class="timeline-icon">2</div>
-              <div>
-                <h3>Personalized recovery roadmap</h3>
-                <p>AI creates a 90-day recovery plan with realistic nightly rituals.</p>
-              </div>
+            <div role="listitem">
+              <span class="stat">4</span>
+              <span class="stat-label">gentle sleep stages</span>
             </div>
-            <div class="timeline-item reveal">
-              <div class="timeline-icon">3</div>
-              <div>
-                <h3>Daily habit optimization</h3>
-                <p>Receive adaptive prompts for light, caffeine, and wind-down balance.</p>
-              </div>
+            <div role="listitem">
+              <span class="stat">15 min</span>
+              <span class="stat-label">average wind-down time</span>
             </div>
-            <div class="timeline-item reveal">
-              <div class="timeline-icon">4</div>
-              <div>
-                <h3>Expert sessions when needed</h3>
-                <p>Certified sleep experts join when your metrics need human guidance.</p>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <p class="card-label">Tonight's mood</p>
+            <h2>Midnight Blue Session</h2>
+            <p>Low brass, brushed drums, slow tempo.</p>
+            <div class="card-progress">
+              <span>01</span>
+              <div class="progress-bar" aria-hidden="true">
+                <span></span>
               </div>
-            </div>
-            <div class="timeline-item reveal">
-              <div class="timeline-icon">5</div>
-              <div>
-                <h3>Continuous improvement loop</h3>
-                <p>Insights update weekly so your plan evolves as your sleep improves.</p>
-              </div>
+              <span>04</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="insights">
-        <div class="container">
-          <p class="pill">Live insight preview</p>
-          <h2 class="section-title">A calming dashboard built for night mode.</h2>
-          <p class="section-lead">
-            Track sleep stages, stress trends, and recovery momentum in a single, low-stimulation
-            view.
+      <section id="about" class="about" aria-labelledby="about-title">
+        <div>
+          <h2 id="about-title">A landing page built for night owls.</h2>
+          <p>
+            Sleepy Jazz is a calm-first experience for people with insomnia. Every
+            element is intentional: soft contrast, generous spacing, and precise copy
+            that encourages slower breathing. The UX prioritizes focus, warmth, and
+            clarity so your mind can settle.
           </p>
-          <div class="preview">
-            <div class="preview-card reveal">
-              <h4>Sleep stages</h4>
-              <div class="bar-chart">
-                <div class="bar"><span style="width: 80%"></span></div>
-                <div class="bar"><span style="width: 60%"></span></div>
-                <div class="bar"><span style="width: 45%"></span></div>
-                <div class="bar"><span style="width: 70%"></span></div>
-              </div>
-            </div>
-            <div class="preview-card reveal">
-              <h4>Stress trend</h4>
-              <div class="line"></div>
-            </div>
-            <div class="preview-card reveal">
-              <h4>Consistency ring</h4>
-              <div class="ring"><span>72%</span></div>
-            </div>
-            <div class="preview-card reveal">
-              <h4>Weekly recovery score</h4>
-              <div class="hero-card" style="box-shadow: none; padding: 16px;">
-                <h3>84 / 100</h3>
-                <p>Up 12 points from last week</p>
-              </div>
-            </div>
+        </div>
+        <div class="about-grid">
+          <article>
+            <h3>Minimalist UI</h3>
+            <p>Clean typography and muted tones reduce overstimulation.</p>
+          </article>
+          <article>
+            <h3>Guided Routine</h3>
+            <p>Short rituals turn rest into a gentle habit, night after night.</p>
+          </article>
+          <article>
+            <h3>Mobile-first</h3>
+            <p>Thumb-friendly controls and flexible layouts for late-night browsing.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="features" aria-labelledby="features-title">
+        <div class="features-header">
+          <h2 id="features-title">Designed to feel like a deep breath.</h2>
+          <p>
+            The Sleepy Jazz experience is built around the three phases of a wind-down
+            routine: slowing the body, quieting the mind, and easing into sleep.
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>Slow Tempo Library</h3>
+            <p>Handpicked tracks under 75 BPM keep your heart rate steady.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Breath Cues</h3>
+            <p>Subtle pulses guide inhaling and exhaling without distraction.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Night Notes</h3>
+            <p>Capture worries and release them before you close your eyes.</p>
           </div>
         </div>
       </section>
 
-      <section class="section" id="why">
-        <div class="container">
-          <p class="pill">Why Sleepy Jazz</p>
-          <h2 class="section-title">Designed for natural sleep recovery.</h2>
-          <div class="why-grid">
-            <div class="why-card reveal">
-              <h3>Science-backed</h3>
-              <p>Built with behavioral sleep medicine and circadian insights.</p>
-            </div>
-            <div class="why-card reveal">
-              <h3>No medication</h3>
-              <p>We focus on routines, environment, and nervous system regulation.</p>
-            </div>
-            <div class="why-card reveal">
-              <h3>AI + human experts</h3>
-              <p>Automated coaching with a human touch when you need it.</p>
-            </div>
-            <div class="why-card reveal">
-              <h3>Works with or without smartwatch</h3>
-              <p>Manual check-ins or automatic tracking—your choice.</p>
-            </div>
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <div class="contact-card">
+          <div>
+            <h2 id="contact-title">Stay close to the night.</h2>
+            <p>
+              Join the Sleepy Jazz list for new sets, insomnia research, and gentle
+              reminders to breathe.
+            </p>
           </div>
-        </div>
-      </section>
-
-      <section class="section" id="pricing">
-        <div class="container">
-          <p class="pill">Pricing</p>
-          <h2 class="section-title">Choose the recovery pace that fits you.</h2>
-          <div class="pricing">
-            <div class="price-card reveal">
-              <h3>Self Recovery</h3>
-              <p class="price">₹699/month</p>
-              <ul>
-                <li>AI sleep assessment</li>
-                <li>Personalized routines</li>
-                <li>Weekly progress insights</li>
-              </ul>
+          <form class="contact-form">
+            <label for="email">Email address</label>
+            <div class="input-row">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+              <button type="submit">Get the playlist</button>
             </div>
-            <div class="price-card reveal">
-              <h3>Guided Recovery</h3>
-              <p class="price">₹1,799/month</p>
-              <ul>
-                <li>Everything in Self Recovery</li>
-                <li>Two expert check-ins / month</li>
-                <li>Priority feedback loop</li>
-              </ul>
-            </div>
-            <div class="price-card reveal">
-              <h3>Deep Recovery</h3>
-              <p class="price">₹3,999/month</p>
-              <ul>
-                <li>Weekly expert sessions</li>
-                <li>Advanced smartwatch analytics</li>
-                <li>Custom recovery intensives</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="stories">
-        <div class="container">
-          <p class="pill">Testimonials</p>
-          <h2 class="section-title">Real nights, real recovery.</h2>
-          <div class="testimonials">
-            <div class="testimonial reveal">
-              <strong>Before: 4 hrs · After: 7 hrs</strong>
-              <p>"I stopped doom-scrolling at 1 AM and started falling asleep by 11:20 PM."</p>
-            </div>
-            <div class="testimonial reveal">
-              <strong>Before: 5 hrs · After: 7.5 hrs</strong>
-              <p>"The 90-day roadmap kept me consistent without feeling overwhelming."</p>
-            </div>
-            <div class="testimonial reveal">
-              <strong>Before: 3.5 hrs · After: 6.8 hrs</strong>
-              <p>"Having a real expert check in made me feel supported and calm."</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="cta">
-        <div class="container">
-          <div class="cta-panel reveal">
-            <h2>Start Your Sleep Reset in 3 Minutes</h2>
-            <p>Answer a few questions and get your personalized recovery roadmap.</p>
-            <a class="button" href="#home">Start Sleep Assessment</a>
-          </div>
+            <p class="form-note">No noise. Just one calm email each week.</p>
+          </form>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="container">© 2024 Sleepy Jazz. Gentle recovery, lasting rest.</div>
+    <footer class="footer">
+      <p>© 2024 Sleepy Jazz. Designed for calm, crafted for sleepless nights.</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+      </div>
     </footer>
-
-    <script>
-      const reveals = document.querySelectorAll('.reveal');
-      const stats = document.querySelectorAll('[data-target]');
-
-      const revealObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              revealObserver.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.2 }
-      );
-
-      reveals.forEach((item) => revealObserver.observe(item));
-
-      const counterObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) {
-              return;
-            }
-            const el = entry.target;
-            const target = Number(el.dataset.target);
-            let current = 0;
-            const increment = Math.max(1, Math.floor(target / 40));
-            const timer = setInterval(() => {
-              current += increment;
-              if (current >= target) {
-                current = target;
-                clearInterval(timer);
-              }
-              el.textContent = `${current}%`;
-            }, 30);
-            counterObserver.unobserve(el);
-          });
-        },
-        { threshold: 0.6 }
-      );
-
-      stats.forEach((stat) => counterObserver.observe(stat));
-    </script>
   </body>
 </html>
